@@ -2,68 +2,266 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
 $font-family: 'Cinzel', serif;
 
+$size-xxl: 3rem;
+$size-xl: 2rem;
+$size-l: 1.5rem;
+$size-m: 1.125rem;
+$size-s: 1rem;
+$size-xs: 0.75rem;
+
+
 // Colors
 $blue: #2775A3;
+$dark-blue: #12374D;
 $black: #020202;
+$grey: #909090;
+$white: #FFFFFF;
 
-
+/**************************************** GENERAL ****************************************/
 * {
 	font-family: $font-family;
 }
 
-/******************** NAVBAR ********************/
-
-.navbar {
-	background-color: black; 
-	color: white !important;
+body {
+	background-color: $black !important;
 }
 
-.nav-item {
+.big-title {
+	font-size: $size-xxl;
+	font-weight: 900;
+}
+
+.ornament {
+	width: 180px;
+	fill: $white;
+}
+
+
+/******************** BUTTONS ********************/
+.button-fill {
+	height: 50px;
+	width: 246px;
+	background-color: $blue;
 	color: white;
+	border: none;
+	font-weight: 700;
+
+	&.dark {
+		background-color: $dark-blue;
+		margin-left: 2rem;
+	}
+}
+.home-start-buttons {
+	margin-top: 2rem;
+}
+
+.buttons-download {
+	margin-top: 2rem;
+}
+
+.button-download {
+	max-width: 100px;
+	max-height: 30px;
+	margin-right: 1rem;
+}
+
+/**************************************** HEADER ****************************************/
+.navbar {
+	background-color: transparent; 
+	color: $white !important;
+	position: absolute !important;
+	width: 100%;
+
+	&-nav {
+		margin-left: 1rem;
+	}
+}
+
+
+.nav-item {
+	color: $white !important;
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
-	background: linear-gradient(to right, lightgrey, lightgrey 50%, white 50%);
+	background: linear-gradient(to right, $blue, $blue 50%, $white 50%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-size: 200% 100%;
 	background-position: 100%;
 	transition: background-position 275ms ease;
+	margin-right: 3rem;
+	margin-left: 1rem;
 
 	&:hover {
 		background-position: 0 100%;
 	}
 }
 
-/* .main {
-	padding: 0 5%;
-} */
+/**************************************** FOOTER ****************************************/
+footer {
+	background-color: $black;
+	color: $white;
+	font-size: $size-s;
+	padding-top: 3rem;
+}
+
+.page-footer {
+	ul {
+		margin: 0;
+	}
+}
+
+.footer-copyright {
+	font-size: $size-xs;
+	opacity: 0.5;
+	padding: 0;
+	padding-bottom: 3rem;
+}
+
+/**************************************** MAIN ****************************************/
+
+/******************** HOME PAGE ********************/
+.container-fluid {
+	background-size:cover !important;;
+	min-height: 95vh !important;
+	background-color: $black;
+}
+
+.container-fluid.home-start {
+	background: linear-gradient(0deg, rgba(2,2,2,1) 0%, rgba(2,2,2,0) 40%), url(../images/background.jpg);
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	overflow: hidden;
+}
 
 
+.home-start-text {
+	color: $white;
 
-/******************** MEDIA QUERIES ********************/
+	.slogan {
+		font-size: $size-l;
+		margin: 0;
+	}
+
+	.title {
+		font-size: $size-xxl;
+		font-weight: 900;
+		margin: 0;
+	}
+
+	.text {
+		font-size: $size-s;
+		margin: 0;
+		max-width: 600px;
+	}
+}
+
+.container-fluid.home-about {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	h4 {
+		font-size: $size-xl;
+	}
+
+	img{
+		height: 500px;
+		width: auto;
+		margin: 2rem;
+	}
+
+	p {
+		font-size: $size-l;
+	}
+}
+
+
+.container-fluid.home-contact {
+	background: linear-gradient(180deg, rgba(2,2,2,1) 0%, rgba(2,2,2,1) 0%, rgba(2,2,2,0) 40%, rgba(2,2,2,1) 80%, rgba(2,2,2,1) 100%), url(../images/background1.jpg);
+}
+
+
+.mailform {
+	width: 100%;
+
+	&-input{
+		margin: 2rem 0;
+		padding: 0.5rem 0;
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid $grey;
+		background-color: transparent;
+		color: $white;
+
+		&::placeholder {
+			color: $grey;
+		}
+
+		&:focus {
+			border: none;
+			border-bottom: 1px solid $white;
+			background-color: transparent;
+			color: $white;
+			outline: none;
+		}
+	}
+}
+
+.container-fluid.home-subscribe {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/**************************************** MEDIA QUERIES ****************************************/
 
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
-
- }
+	
+}
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
-
- }
+	.container-fluid .navbar {
+		padding: 0 5% !important;
+	}
+}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) { 
-
- }
+	.container-fluid, .navbar {
+		padding: 0 10% !important;
+	}
+}
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
-
+	.char1-container {
+		position: absolute;
+		display: block;
+	}
 }
 
+
+@media (max-width: 576px) { 
+	.button-fill.dark {
+		margin: 0;
+		margin-top: 1rem;
+	}
+}
+
+@media (max-width: 768px) { 
+	.home-start {
+		text-align: center;
+	}
+}

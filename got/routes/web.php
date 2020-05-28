@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/contact', 'MailController@getContact')->name('contact');
-Route::post('/contact', 'MailController@postContact')->name('contact.save');
-
 
 Route::get('/', 'PageController@home')->name('home');
+
+Route::get('/', 'MailController@getContact')->name('contact');
+Route::post('/', 'MailController@postContact')->name('contact.save');
 
 Route::get('/blogs', 'PageController@blogs')->name('blogs');
 Route::get('/donate', 'PageController@donate')->name('donate');

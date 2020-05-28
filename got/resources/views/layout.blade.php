@@ -12,9 +12,9 @@
 <body>
 	<header>
 		<nav class="navbar navbar-dark navbar-expand-lg">
-			<svg class="navbar-brand" href="/" width="100" height="50">       
-    			<image xlink:href="../../images/vector/logo.svg" src="../../images/vector/logo.svg" width="100" height="50"/>    
-			</svg>
+			<a class="navbar-brand" href="/" width="200" height="100">       
+    			<img xlink:href="../../images/vector/logo.svg" src="../../images/vector/logo.svg" width="200" height="100"> 
+			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon">   
 					<i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
@@ -36,7 +36,7 @@
 
 	</div>
 
-	<footer class="page-footer font-small special-color-dark pt-4">
+	<footer class="page-footerspecial-color-dark">
 		<div class="container">
 		<ul class="list-unstyled list-inline text-center">
 			<li class="list-inline-item">
@@ -53,7 +53,7 @@
 			</li>
 		</ul>
 		</div>
-		<div class="footer-copyright text-center py-3">© 2020 Copyright: Yentel De Hauwere </div>
+		<div class="footer-copyright text-center">© 2020 Copyright: Yentel De Hauwere </div>
 	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
