@@ -12,12 +12,25 @@
 				<p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore </p>
 			</div>
 			<div class="home-start-buttons">
-				<button class="button-fill">download</button>
-				<button class="button-fill dark">donate</button>
+				<a class="svg-wrapper" href="#">
+					<svg height="60" width="500" xmlns="http://www.w3.org/2000/svg">
+					<rect class="shape1" height="50" width="246" />
+					<rect class="shape2" height="50" width="246" />
+					<div class="button-text">DOWNLOAD</div>
+					</svg>
+				</a>
+				<a class="svg-wrapper" href="/donate">
+					<svg height="60" width="500" xmlns="http://www.w3.org/2000/svg">
+					<rect class="shape1" height="50" width="246" />
+					<rect class="shape2" height="50" width="246" />
+					<div class="button-text">DONATE</div>
+					</svg>
+				</a>
 			</div>
 			<div class="buttons-download" >
 				<a href="#"><img class="button-download" src="../../images/appstore.png" alt="app store"></a>
 				<a href="#"><img class="button-download" src="../../images/googleplay.png" alt="google play"></a>
+				
 			</div>
 		</div>
 	</div>
@@ -41,7 +54,13 @@
 					<input class="mailform-input" type="email" name="email" id="email" placeholder="Mail">
 					<input class="mailform-input" type="text" name="subject" id="subject" placeholder="Subject">
 					<textarea class="mailform-input" name="content" id="content" cols="30" rows="10" placeholder="Message"></textarea>
-					<button class="button-fill" type="submit">submit</button>
+					<button class="svg-wrapper" type="submit">
+						<svg height="50" width="246" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape1" height="50" width="246" />
+						<rect class="shape2" height="50" width="246" />
+						<div class="button-text submit">SUBMIT</div>
+						</svg>
+					</button>
 				</form>
 			</div>
 		</div>

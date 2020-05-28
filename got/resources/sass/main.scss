@@ -20,6 +20,7 @@ $white: #FFFFFF;
 /**************************************** GENERAL ****************************************/
 * {
 	font-family: $font-family;
+	color: $white;
 }
 
 body {
@@ -38,21 +39,9 @@ body {
 
 
 /******************** BUTTONS ********************/
-.button-fill {
-	height: 50px;
-	width: 246px;
-	background-color: $blue;
-	color: white;
-	border: none;
-	font-weight: 700;
-
-	&.dark {
-		background-color: $dark-blue;
-		margin-left: 2rem;
-	}
-}
 .home-start-buttons {
 	margin-top: 2rem;
+	display: flex;
 }
 
 .buttons-download {
@@ -63,6 +52,63 @@ body {
 	max-width: 100px;
 	max-height: 30px;
 	margin-right: 1rem;
+	transition: 0.3s;
+	transition-timing-function: ease-in;
+
+	&:hover {
+		transform: scale(1.05);
+		transition: 1;
+	}
+}
+
+.svg-wrapper {
+  position: relative;
+  width: 246px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  border: 1px solid white;
+  margin: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover {
+	  text-decoration: none;
+  }
+}
+.shape1,
+.shape2 {
+  stroke-dasharray: 592;
+  stroke-width: 3px;
+  fill: transparent;
+  background-color: transparent;
+  stroke: $white;
+  transition-timing-function: ease-out;
+  transition: stroke-dashoffset 2s, stroke-dasharray 2s;
+}
+.shape1 {
+  stroke-dashoffset: 592;
+}
+.shape2 {
+  stroke-dashoffset: -592;
+}
+.button-text {
+  font-family: $font-family;
+  font-size: $size-s;
+  font-weight: 700;
+  color: #fff;
+  top: -48px;
+  position: relative;
+
+  &.submit {
+	top: -36px;
+  }
+}
+.svg-wrapper:hover .shape1,
+.svg-wrapper:hover .shape2 {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 592;
 }
 
 /**************************************** HEADER ****************************************/
@@ -83,13 +129,13 @@ body {
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
-	background: linear-gradient(to right, $blue, $blue 50%, $white 50%);
+	background: linear-gradient(to right, $white, $white 50%, #BFBFBF 50%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-size: 200% 100%;
 	background-position: 100%;
-	transition: background-position 275ms ease;
+	transition: background-position 1s ease;
 	margin-right: 3rem;
 	margin-left: 1rem;
 
@@ -235,6 +281,9 @@ footer {
 	.container-fluid .navbar {
 		padding: 0 5% !important;
 	}
+	.svg-wrapper {
+		margin-left: 0;
+	}
 }
 
 // Large devices (desktops, 992px and up)
@@ -242,6 +291,7 @@ footer {
 	.container-fluid, .navbar {
 		padding: 0 10% !important;
 	}
+	
 }
 
 // Extra large devices (large desktops, 1200px and up)
