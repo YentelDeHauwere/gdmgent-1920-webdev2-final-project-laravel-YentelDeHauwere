@@ -205,13 +205,14 @@ footer {
 }
 
 .container-fluid.home-about img {
-  height: 500px;
+  height: 300px;
   width: auto;
   margin: 2rem;
 }
 
 .container-fluid.home-about p {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
+  max-width: 500px;
 }
 
 .container-fluid.home-contact {
@@ -297,9 +298,31 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .home-start {
     text-align: center;
+    justify-content: center !important;
+  }
+
+  .home-start-buttons {
+    justify-content: center;
+  }
+
+  .container-fluid {
+    justify-content: center;
+  }
+
+  .mailform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-start-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
