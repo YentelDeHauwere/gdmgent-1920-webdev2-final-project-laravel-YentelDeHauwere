@@ -22,3 +22,12 @@ Route::post('/', 'MailController@postContact')->name('contact.save');
 Route::get('/blogs', 'PageController@blogs')->name('blogs');
 Route::get('/donate', 'PageController@donate')->name('donate');
 
+Route::prefix('dashboard')->as('dashboard.')->group(function() {
+
+	Route::get('/pages', 'DashboardController@getIndexPages')->name('pages.index');
+	Route::get('/pages/create', 'DashboardController@getCreatePage')->name('pages.create');
+	Route::post('/pages/create', 'DashboardController@postCreatePage')->name('pages.create.post');
+	Route::get('/pages/edit/{page}', 'DashboardController@getEditPage')->name('pages.edit');
+	Route::post('/pages/edit/{page}', 'DashboardController@postEditPage')->name('pages.edit.post');
+	Route::post('/pages/delete', 'DashboardController@postDelete')->name('pages.delete');
+});
