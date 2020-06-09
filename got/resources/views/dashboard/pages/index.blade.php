@@ -24,7 +24,7 @@
                             </td>
                             <td>
 								<a href="{{ route('dashboard.pages.edit', $page->id) }}" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-								<form action="{{ route('dashboard.pages.delete')}}" method="post">
+								<form action="{{ route('dashboard.pages.delete', $page->id )}}" method="get">
                                     @csrf
                                     <input type="hidden" name="page_id" value="{{ $page->id}}">
                                     <button class="btn btn-danger">

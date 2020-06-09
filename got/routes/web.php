@@ -33,7 +33,7 @@ Route::prefix('dashboard')->as('dashboard.')->group(function() {
 	Route::post('/pages/create', 'DashboardController@postCreatePage')->name('pages.create.post');
 	Route::get('/pages/edit/{page}', 'DashboardController@getEditPage')->name('pages.edit');
 	Route::post('/pages/edit/{page}', 'DashboardController@postEditPage')->name('pages.edit.post');
-	Route::post('/pages/delete', 'DashboardController@postDeletePage')->name('pages.delete');
+	Route::get('/pages/delete/{id}', 'DashboardController@getDeletePage')->name('pages.delete');
 });
 
 Route::get('/{slug}', 'PagesController@getPage')->name('page');

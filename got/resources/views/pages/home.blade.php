@@ -46,7 +46,7 @@
 <div class="container-fluid home-contact">
 	<div class="container home-contact">
 		<div class="row justify-content-start">
-			<div class="col-12 col-lg-6 col-xl-lg5">
+			<div class="col-12 col-lg-6 col-xl-lg-5">
 				<h1 class="big-title">Contact us</h1>
 				<form class="mailform" action="" method="post">
 					@csrf
@@ -68,24 +68,25 @@
 </div>
 
 <div class="container-fluid home-subscribe">
-	@if (session('alert'))
-		<div class="alert alert-success">
-			{{ session('alert') }}
-		</div>
-	@endif
-
-	<h1 class="big-title">SUBSCRIBE TO OUR NEWSLETTER</h1>
+	<div class="row justify-content-center">
+		<div class="col-12 col-lg-6 col-xl-lg-5">
+			<h1 class="big-title">SUBSCRIBE TO OUR NEWSLETTER</h1>
 	
-	<form action="" method="post">
-		@csrf
-		<div class="form-group">
-			<input id="email" type="email" name="email" class="form-control" placeholder="Email">
+			<form class="mailform" action="" method="post">
+				@csrf
+				<input id="email" type="email" name="email" class="mailform-input" placeholder="Email">
+				<button class="svg-wrapper" type="submit">
+					<svg height="50" width="246" xmlns="http://www.w3.org/2000/svg">
+					<rect class="shape1" height="50" width="246" />
+					<rect class="shape2" height="50" width="246" />
+					<div class="button-text submit">SUBSCRIBE</div>
+					</svg>
+				</button>
+			</form>
+		</div>
+	</div>
 
-		</div>
-		<div class="form-group">
-			<input type="submit" class="form-control">
-		</div>
-	</form>
+	
 
 </div>
 

@@ -50,7 +50,9 @@ class DashboardController extends Controller
 		return redirect()->route('dashboard.pages.index');
 	}
 
-	public function postDeletePage(Page $page) {
-		
+	public function getDeletePage($id) {
+		$page = Page::where('id', $id);
+		$page->delete();
+		return redirect()->route('dashboard.pages.index');
 	}
 }
