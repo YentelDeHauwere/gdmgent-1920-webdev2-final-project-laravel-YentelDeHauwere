@@ -19,6 +19,10 @@ Route::get('/', 'PageController@home')->name('home');
 Route::get('/', 'MailController@getContact')->name('contact');
 Route::post('/', 'MailController@postContact')->name('contact.save');
 
+Route::get('/', 'NewsletterController@getEmail')->name('mail');
+Route::post('/', 'NewsletterController@postEmail')->name('mail.save');
+
+
 Route::get('/blogs', 'PageController@blogs')->name('blogs');
 Route::get('/donate', 'PageController@donate')->name('donate');
 
@@ -29,5 +33,7 @@ Route::prefix('dashboard')->as('dashboard.')->group(function() {
 	Route::post('/pages/create', 'DashboardController@postCreatePage')->name('pages.create.post');
 	Route::get('/pages/edit/{page}', 'DashboardController@getEditPage')->name('pages.edit');
 	Route::post('/pages/edit/{page}', 'DashboardController@postEditPage')->name('pages.edit.post');
-	Route::post('/pages/delete', 'DashboardController@postDelete')->name('pages.delete');
+	Route::post('/pages/delete', 'DashboardController@postDeletePage')->name('pages.delete');
 });
+
+Route::get('/{slug}', 'PagesController@getPage')->name('page');

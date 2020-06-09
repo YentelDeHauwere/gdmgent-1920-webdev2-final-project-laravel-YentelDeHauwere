@@ -88,7 +88,7 @@ body {
                     <th class="small-6 large-6 columns first" valign="middle">
                       <table>
                         <tr>
-                          <th><img src="https://static.wixstatic.com/media/c09691_f7dbf45a9b8d4c7e988b40a52b217ea5~mv2.png/v1/fit/w_2500,h_1330,al_c/c09691_f7dbf45a9b8d4c7e988b40a52b217ea5~mv2.png"></th>
+                          <th><img src="https://i.ytimg.com/vi/gY5TQMSWT5s/maxresdefault.jpg"></th>
                         </tr>
                       </table>
                     </th>

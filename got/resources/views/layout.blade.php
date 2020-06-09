@@ -8,9 +8,9 @@
 	<link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-
+	<script src="https://cdn.tiny.cloud/1/ty7nj76e0dh3yr7tjuyhdrerfmk65xecqwh0jqzfkntl9kg3/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 	@yield('scripts')
 </head>
 <body>
@@ -29,6 +29,7 @@
 					<a class="nav-item nav-link" href="/">Home</a>
 					<a class="nav-item nav-link" href="/blogs">Blogs</a>
 					<a class="nav-item nav-link" href="/donate">Donate</a>
+					<a class="nav-item nav-link" href="/dashboard/pages">Admin Stuff</a>
 				</div>
 			</div>
 		</nav>

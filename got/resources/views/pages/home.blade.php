@@ -68,7 +68,25 @@
 </div>
 
 <div class="container-fluid home-subscribe">
+	@if (session('alert'))
+		<div class="alert alert-success">
+			{{ session('alert') }}
+		</div>
+	@endif
+
 	<h1 class="big-title">SUBSCRIBE TO OUR NEWSLETTER</h1>
+	
+	<form action="" method="post">
+		@csrf
+		<div class="form-group">
+			<input id="email" type="email" name="email" class="form-control" placeholder="Email">
+
+		</div>
+		<div class="form-group">
+			<input type="submit" class="form-control">
+		</div>
+	</form>
+
 </div>
 
 @endsection
