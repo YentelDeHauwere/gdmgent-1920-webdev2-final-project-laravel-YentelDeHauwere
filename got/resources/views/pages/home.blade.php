@@ -69,7 +69,7 @@
 
 <div class="container-fluid home-subscribe">
 	<div class="row justify-content-center">
-		<div class="col-12 col-lg-6 col-xl-lg-5">
+		<div class="col-10 col-lg-12">
 			<h1 class="big-title">SUBSCRIBE TO OUR NEWSLETTER</h1>
 	
 			<form class="mailform" action="" method="post">
