@@ -28,7 +28,8 @@
 					<a class="nav-item nav-link" href="/">Home</a>
 					<a class="nav-item nav-link" href="/blogs">Blogs</a>
 					<a class="nav-item nav-link" href="/donate">Donate</a>
-					<a class="nav-item nav-link" href="/dashboard/pages">Admin Stuff</a>
+					<a class="nav-item nav-link" href="/dashboard/pages">Admin Pages</a>
+					<a class="nav-item nav-link" href="/dashboard/blogs">Admin Blog</a>
 				</div>
 			</div>
 		</nav>

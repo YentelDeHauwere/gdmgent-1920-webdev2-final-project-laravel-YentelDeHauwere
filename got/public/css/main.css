@@ -265,6 +265,91 @@ footer {
   justify-content: center;
 }
 
+.container-fluid {
+  padding-top: 150px !important;
+}
+
+/******************** BLOGS PAGE ********************/
+
+.blog {
+  display: flex;
+  justify-content: center;
+}
+
+.blog-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-left-author {
+  font-size: 0.75rem;
+}
+
+.blog-left-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.blog-left-intro {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.blog-right-image {
+  padding: 20px;
+  width: 200px;
+  height: 325px;
+}
+
+.fa-angle-right {
+  margin-left: 10px;
+}
+
+.row.div {
+  margin-bottom: 100px;
+  height: 80%;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+.pagination li a {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.pagination:hover {
+  color: white;
+  opacity: 1;
+}
+
+.page-link {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.page-link:hover {
+  color: white !important;
+}
+
+.page-item {
+  margin: 20px;
+  opacity: 0.6;
+}
+
+.page-item:hover {
+  opacity: 1;
+}
+
+.page-item.active {
+  font-weight: 700;
+  opacity: 1;
+}
+
 /**************************************** DASHBOARD ****************************************/
 
 .dashboard {
@@ -277,6 +362,10 @@ footer {
 @media (min-width: 768px) {
   .container-fluid .navbar {
     padding: 0 5% !important;
+  }
+
+  .container-fluid {
+    padding-top: 150px !important;
   }
 
   .svg-wrapper {
@@ -299,6 +388,11 @@ footer {
   .char1-container {
     position: absolute;
     display: block;
+  }
+
+  .row.div {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 
@@ -334,6 +428,19 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .blog-right,
+  .blog-left {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .blog-text {
+    text-align: center;
   }
 }
 

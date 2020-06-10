@@ -24,6 +24,9 @@ Route::post('/', 'NewsletterController@postEmail')->name('mail.save');
 
 
 Route::get('/blogs', 'PageController@blogs')->name('blogs');
+Route::get('/blogs/detail/{blog}', 'PageController@blogDetail')->name('blogs.detail');
+
+
 Route::get('/donate', 'PageController@donate')->name('donate');
 
 Route::prefix('dashboard')->as('dashboard.')->group(function() {
@@ -34,6 +37,13 @@ Route::prefix('dashboard')->as('dashboard.')->group(function() {
 	Route::get('/pages/edit/{page}', 'DashboardController@getEditPage')->name('pages.edit');
 	Route::post('/pages/edit/{page}', 'DashboardController@postEditPage')->name('pages.edit.post');
 	Route::get('/pages/delete/{id}', 'DashboardController@getDeletePage')->name('pages.delete');
+
+	Route::get('/blogs', 'BlogController@getIndexBlogs')->name('blogs.index');
+	Route::get('/blogs/create', 'BlogController@getCreateBlog')->name('blogs.create');
+	Route::post('/blogs/create', 'BlogController@postCreateBlog')->name('blogs.create.post');
+	Route::get('/blogs/edit/{blog}', 'BlogController@getEditBlog')->name('blogs.edit');
+	Route::post('/blogs/edit/{blog}', 'BlogController@postEditBlog')->name('blogs.edit.post');
+	Route::get('/blogs/delete/{id}', 'BlogController@getDeleteBlog')->name('blogs.delete');
 });
 
 Route::get('/{slug}', 'PagesController@getPage')->name('page');

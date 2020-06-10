@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
+
+use App\Blog;
 
 class PageController extends Controller
 {
@@ -11,7 +15,12 @@ class PageController extends Controller
 	}
 
 	public function blogs() {
-		return view('pages.blogs');
+		$blogs = DB::table('blogs')->paginate(6);
+		return view('pages.blogs', ['blogs' => $blogs]);
+	}
+
+	public function blogDetail(Blog $blog) {
+		return view('pages.blog', ['blog' => $blog]);
 	}
 
 	public function donate() {

@@ -295,6 +295,103 @@ footer {
           justify-content: center;
 }
 
+.container-fluid {
+  padding-top: 150px !important;
+}
+
+/******************** BLOGS PAGE ********************/
+.blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.blog-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog-left-author {
+  font-size: 0.75rem;
+}
+
+.blog-left-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.blog-left-intro {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.blog-right-image {
+  padding: 20px;
+  width: 200px;
+  height: 325px;
+}
+
+.fa-angle-right {
+  margin-left: 10px;
+}
+
+.row.div {
+  margin-bottom: 100px;
+  height: 80%;
+}
+
+.pagination {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination li a {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.pagination:hover {
+  color: white;
+  opacity: 1;
+}
+
+.page-link {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.page-link:hover {
+  color: white !important;
+}
+
+.page-item {
+  margin: 20px;
+  opacity: 0.6;
+}
+
+.page-item:hover {
+  opacity: 1;
+}
+
+.page-item.active {
+  font-weight: 700;
+  opacity: 1;
+}
+
 /**************************************** DASHBOARD ****************************************/
 .dashboard {
   height: 100vh;
@@ -306,6 +403,9 @@ footer {
   .container-fluid .navbar {
     padding: 0 5% !important;
   }
+  .container-fluid {
+    padding-top: 150px !important;
+  }
   .svg-wrapper {
     margin-left: 0;
   }
@@ -315,12 +415,24 @@ footer {
   .container-fluid, .navbar {
     padding: 0 10% !important;
   }
+  .container-fluid {
+    padding-top: 150px !important;
+  }
 }
 
 @media (min-width: 1200px) {
   .char1-container {
     position: absolute;
     display: block;
+  }
+  .row.div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 
@@ -374,6 +486,23 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .blog-right, .blog-left {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blog-text  {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=main.css.map */
