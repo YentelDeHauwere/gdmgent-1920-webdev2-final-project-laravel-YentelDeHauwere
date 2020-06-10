@@ -20,7 +20,7 @@
                                 {{$page->title}}
                             </td>
                             <td>
-                                {{ Str::limit($page->intro, 50) }};
+                                {{ Str::limit($page->intro, 50) }}
                             </td>
                             <td>
 								<a href="{{ route('dashboard.pages.edit', $page->id) }}" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>

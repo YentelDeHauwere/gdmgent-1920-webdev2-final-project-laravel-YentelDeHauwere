@@ -21,8 +21,6 @@ class CreateBlogsTable extends Migration
 
 			$table->text('intro')->nullable();
 			$table->text('content')->nullable();
-
-			$table->tinyInteger('active')->default(1);
 			
             $table->timestamps();
         });

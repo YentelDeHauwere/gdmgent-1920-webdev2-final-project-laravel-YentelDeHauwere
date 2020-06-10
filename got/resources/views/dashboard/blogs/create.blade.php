@@ -26,13 +26,6 @@
 						<input type="text" name="title" class="form-control" id="title" placeholder="Place title here">
 					</div>
 					<div class="form-group">
-						<label for="active">Active</label>
-						<select class="form-control" id="active" name="active">
-						  <option value="1">Visible</option>
-						  <option value="0">Invisible</option>
-						</select>
-					</div>
-					<div class="form-group">
 						<label for="intro">Intro</label>
 						<textarea class="form-control" id="intro" name="intro" rows="6"></textarea>
 					</div>

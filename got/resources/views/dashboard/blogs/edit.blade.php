@@ -28,23 +28,12 @@
 						<input value="{{$blog->title}}" type="text" name="title" class="form-control" id="title" placeholder="Place title here">
 					</div>
 					<div class="form-group">
-						<label for="active">Active</label>
-						<select class="form-control" id="active" name="active">
-							<option @if($blog->active) selected @endif value="1">Visible</option>
-							<option @if(!$blog->active) selected @endif value="0">Invisible</option>
-						</select>
-					</div>
-					<div class="form-group">
 						<label for="intro">Intro</label>
 						<textarea class="form-control" id="intro" name="intro" rows="6">{{$blog->intro}}</textarea>
 					</div>
 					<div class="form-group">
 						<label for="content">Content</label>
 						<textarea id="content" name="content">{{$blog->content}}</textarea>
-					</div>
-					<div class="form-group">
-						<label for="template">Template</label>
-						<input value="{{$blog->template}}" type="text" name="template" class="form-control" id="template" placeholder="Template">
 					</div>
 					<button class="btn btn-warning" type="submit">
 						Submit

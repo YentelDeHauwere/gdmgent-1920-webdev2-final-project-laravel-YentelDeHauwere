@@ -24,7 +24,6 @@ class BlogController extends Controller
 		$blog->slug = Str::snake($r->title);
 		$blog->intro = $r->intro;
 		$blog->content = $r->content;
-		$blog->template = $r->template;
 		$blog->save();
 
 		return redirect()->route('dashboard.blogs.index');
@@ -43,7 +42,6 @@ class BlogController extends Controller
 		$blog->slug = Str::snake($r->title);
 		$blog->intro = $r->intro;
 		$blog->content = $r->content;
-		$blog->template = $r->template;
 		$blog->save();
 
 		return redirect()->route('dashboard.blogs.index');

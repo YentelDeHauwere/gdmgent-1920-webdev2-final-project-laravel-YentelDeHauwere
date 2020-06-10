@@ -20,7 +20,7 @@
                                 {{$blog->title}}
                             </td>
                             <td>
-                                {{ Str::limit($blog->intro, 50) }};
+                                {{ Str::limit($blog->intro, 50) }}
                             </td>
                             <td>
 								<a href="{{ route('dashboard.blogs.edit', $blog->id) }}" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>

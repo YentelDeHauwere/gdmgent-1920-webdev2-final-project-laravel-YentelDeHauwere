@@ -12,6 +12,7 @@
 
 	<script src="https://cdn.tiny.cloud/1/ty7nj76e0dh3yr7tjuyhdrerfmk65xecqwh0jqzfkntl9kg3/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 	@yield('scripts')
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header>

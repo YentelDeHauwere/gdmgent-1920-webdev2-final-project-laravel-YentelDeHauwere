@@ -112,6 +112,7 @@ body {
   color: #FFFFFF !important;
   position: absolute !important;
   width: 100%;
+  z-index: 10 !important;
 }
 
 .navbar-nav {
@@ -502,6 +503,9 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }
 
