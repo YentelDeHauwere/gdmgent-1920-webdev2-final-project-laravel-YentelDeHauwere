@@ -357,6 +357,21 @@ footer {
 	}
 }
 
+.goback {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	margin-left: 20px;
+	margin-bottom: 100px;
+	color: white;
+	background-color: rgba(0,0,0,0.4);
+	padding: 10px 20px;
+
+	&:hover {
+		text-decoration: none;
+		color: white;
+	}
+}
 
 /**************************************** DASHBOARD ****************************************/
 
