@@ -26,6 +26,13 @@
 						<input type="text" name="title" class="form-control" id="title" placeholder="Place title here">
 					</div>
 					<div class="form-group">
+						<label for="active">Image</label>
+						<select class="form-control" id="active" name="active">
+						  <option value="https://lorempixel.com/250/325/cats/?44114">Kat</option>
+						  <option value="https://lorempixel.com/250/325/cats/?11489">Katje</option>
+						</select>
+					</div>
+					<div class="form-group">
 						<label for="intro">Intro</label>
 						<textarea class="form-control" id="intro" name="intro" rows="6"></textarea>
 					</div>

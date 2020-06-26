@@ -21,6 +21,8 @@ class CreateBlogsTable extends Migration
 
 			$table->text('intro')->nullable();
 			$table->text('content')->nullable();
+
+			$table->text('image')->default('https://lorempixel.com/250/325/cats/?44114')->nullable();
 			
             $table->timestamps();
         });
