@@ -13,26 +13,6 @@
   </head>
     <body>
       <span class="preheader"></span>
-    <!-- Info Banner For Announcements or Links -->
-    <!-- <a href="https://zurb.com/university/foundation-intro" class="docs-banner course-banner">
-      <div class="info">
-        <h5 class=""><strong>To master everything new in 6.4, along with the rest of Foundation register for our Aug 8th Webinar Class &rsaquo;</strong></h5>
-      </div>
-    </a> -->
-    
-    <!-- <a href="https://zurb.com/wired" id="notice">
-      <div class="info hide-for-small">
-        <div id="clockdiv" class="countdown">
-            <span class="timer-day days"></span>
-            <span class="timer-colon">:</span>
-          <span class="timer-hour hours"></span>
-          <span class="timer-colon">:</span>
-          <span class="timer-hour minutes"></span>
-          <span class="timer-colon">:</span>
-          <span class="timer-seconds seconds"></span>
-        </div>
-      </div>
-    </a> -->
 
 <style type="text/css">
 .header {

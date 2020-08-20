@@ -10,6 +10,11 @@ use App\Page;
 class DashboardController extends Controller
 {
 
+	public function __construct()
+    {
+        $this->middleware('auth');
+	}
+
 	public function getIndexPages() {
 		$pages = Page::all();
 		return view('dashboard.pages.index', ['pages' => $pages]);

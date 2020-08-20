@@ -54,7 +54,7 @@
 					<input class="mailform-input" type="email" name="email" id="email" placeholder="Mail">
 					<input class="mailform-input" type="text" name="subject" id="subject" placeholder="Subject">
 					<textarea class="mailform-input" name="content" id="content" cols="30" rows="10" placeholder="Message"></textarea>
-					<button class="svg-wrapper" type="submit">
+					<button class="svg-wrapper" type="submit" name="form">
 						<svg height="50" width="246" xmlns="http://www.w3.org/2000/svg">
 						<rect class="shape1" height="50" width="246" />
 						<rect class="shape2" height="50" width="246" />
@@ -75,7 +75,7 @@
 			<form class="mailform" action="" method="post">
 				@csrf
 				<input id="email" type="email" name="email" class="mailform-input" placeholder="Email">
-				<button class="svg-wrapper" type="submit">
+				<button class="svg-wrapper" type="submit" name="form">
 					<svg height="50" width="246" xmlns="http://www.w3.org/2000/svg">
 					<rect class="shape1" height="50" width="246" />
 					<rect class="shape2" height="50" width="246" />
@@ -85,9 +85,6 @@
 			</form>
 		</div>
 	</div>
-
-	
-
 </div>
 
 @endsection

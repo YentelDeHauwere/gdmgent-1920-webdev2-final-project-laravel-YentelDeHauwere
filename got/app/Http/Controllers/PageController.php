@@ -15,15 +15,11 @@ class PageController extends Controller
 	}
 
 	public function blogs() {
-		$blogs = DB::table('blogs')->paginate(6);
+		$blogs = DB::table('blogs')->paginate(7);
 		return view('pages.blogs', ['blogs' => $blogs]);
 	}
 
 	public function blogDetail(Blog $blog) {
 		return view('pages.blog', ['blog' => $blog]);
-	}
-
-	public function donate() {
-		return view('pages.donate');
 	}
 }

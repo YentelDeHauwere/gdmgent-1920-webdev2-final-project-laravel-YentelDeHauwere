@@ -1,9 +1,19 @@
 @extends('layout')
+<style>
+	#blogs {
+		list-style-type: none;
+		padding: 0;
+	}
 
+	#firstBlog {
+		display: flex;
+		padding: 22vh 100px 22vh 12vw;
+	}
+</style>
 @section('content')
 
 <div class="container-fluid">
-	<div class="row justify-content-center">
+	<div class="row justify-content-center" id="blogs">
 		@foreach($blogs as $blog)
 			<div class="col-10 col-xl-6 px-md-5">
 
@@ -33,5 +43,24 @@
 	</div>
 <span>{{$blogs->links()}}</span>
 </div>
+
+<script>
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+  } else {
+	const firstBlog = document.getElementById('blogs').querySelectorAll(".col-10");
+	firstBlog[0].className = 'col-12';
+	
+	firstBlog[0].setAttribute('id', 'firstBlog')
+  }
+}
+
+var x = window.matchMedia("(max-width: 700px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+	
+</script>
 
 @endsection

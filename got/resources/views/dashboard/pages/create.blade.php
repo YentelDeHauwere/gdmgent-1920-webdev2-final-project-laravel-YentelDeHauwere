@@ -19,7 +19,7 @@
 
         <div class="row">
             <div class="col">
-				<form action="{{ route('dashboard.pages.create')}}" method="post">
+				<form action="{{ route('dashboard.pages.create')}}" method="POST">
 					@csrf
 					<div class="form-group">
 						<label for="title">Title</label>

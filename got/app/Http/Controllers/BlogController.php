@@ -9,6 +9,12 @@ use App\Blog;
 
 class BlogController extends Controller
 {
+
+	public function __construct()
+    {
+        $this->middleware('auth');
+	}
+	
     public function getIndexBlogs() {
 		$blogs = Blog::all();
 		return view('dashboard.blogs.index', ['blogs' => $blogs]);
@@ -43,6 +49,12 @@ class BlogController extends Controller
 		$blog->slug = Str::snake($r->title);
 		$blog->intro = $r->intro;
 		$blog->content = $r->content;
+		
+		$path = $request->file('image')->getRealPath();
+		$logo = file_get_contents($path);
+		$base64 = base64_encode($logo);
+		$blog->logo = $base64;
+
 		$blog->save();
 
 		return redirect()->route('dashboard.blogs.index');

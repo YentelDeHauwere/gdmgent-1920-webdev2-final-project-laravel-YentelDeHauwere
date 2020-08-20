@@ -17,7 +17,7 @@ class BlogSeeder extends Seeder
 		for($i=1; $i<20; $i++){
 			DB::table('blogs')->insert([
 				'id'=>$i,
-				'image'=>$faker->imageUrl($width = 250, $height = 325, 'cats') ,
+				'image'=>$faker->imageUrl($width = 250, $height = 325, 'nature') ,
 				'title'=>$faker->sentence(6),
 				'slug'=>'slug',
 				'intro'=>$faker->sentence(15),

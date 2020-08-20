@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
+	protected $errorBag = 'mailForm';
+
     public function getContact() {
 		return view('pages.home');
 	}

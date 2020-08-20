@@ -19,7 +19,7 @@
 
         <div class="row">
             <div class="col">
-				<form action="{{ route('dashboard.blogs.create')}}" method="post">
+				<form action="{{ route('dashboard.blogs.create')}}" method="post" enctype="multipart/form-data"> 
 					@csrf
 					<div class="form-group">
 						<label for="title">Title</label>
@@ -27,10 +27,9 @@
 					</div>
 					<div class="form-group">
 						<label for="active">Image</label>
-						<select class="form-control" id="active" name="active">
-						  <option value="https://lorempixel.com/250/325/cats/?44114">Kat</option>
-						  <option value="https://lorempixel.com/250/325/cats/?11489">Katje</option>
-						</select>
+						<div class="custom-file">
+							<input type="file" id="image" name="image" class="form-control">
+						</div>
 					</div>
 					<div class="form-group">
 						<label for="intro">Intro</label>

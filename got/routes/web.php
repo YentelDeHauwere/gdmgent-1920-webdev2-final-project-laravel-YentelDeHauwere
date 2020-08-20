@@ -27,7 +27,10 @@ Route::get('/blogs', 'PageController@blogs')->name('blogs');
 Route::get('/blogs/detail/{blog}', 'PageController@blogDetail')->name('blogs.detail');
 
 
-Route::get('/donate', 'PageController@donate')->name('donate');
+
+Route::prefix('donate')->as('donate.')->group(function() {
+	Route::get('/', 'DonateController@getIndex')->name('donate');
+});
 
 Route::prefix('dashboard')->as('dashboard.')->group(function() {
 
@@ -47,3 +50,7 @@ Route::prefix('dashboard')->as('dashboard.')->group(function() {
 });
 
 Route::get('/{slug}', 'PagesController@getPage')->name('page');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
