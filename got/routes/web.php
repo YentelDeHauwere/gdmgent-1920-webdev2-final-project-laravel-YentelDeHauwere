@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Deze regel moet boven
+Auth::routes();
+
+Route::name('webhooks.mollie')->post('webhooks/mollie', 'WebHookController@handle');
 
 Route::get('/', 'PageController@home')->name('home');
 
@@ -29,7 +33,11 @@ Route::get('/blogs/detail/{blog}', 'PageController@blogDetail')->name('blogs.det
 
 
 Route::prefix('donate')->as('donate.')->group(function() {
-	Route::get('/', 'DonateController@getIndex')->name('donate');
+	Route::get('/', 'DonationController@getIndex')->name('index');
+	Route::post('/', 'DonationController@postDonate')->name('donate');
+
+	Route::get('/checkout', 'DonationController@getCheckout')->name('checkout');
+	Route::get('/succes', 'DonationController@getSucces')->name('succes');
 });
 
 Route::prefix('dashboard')->as('dashboard.')->group(function() {
@@ -50,7 +58,5 @@ Route::prefix('dashboard')->as('dashboard.')->group(function() {
 });
 
 Route::get('/{slug}', 'PagesController@getPage')->name('page');
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

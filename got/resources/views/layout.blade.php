@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 	<script src="https://cdn.tiny.cloud/1/ty7nj76e0dh3yr7tjuyhdrerfmk65xecqwh0jqzfkntl9kg3/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 	@yield('scripts')
 	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
@@ -29,8 +28,24 @@
 					<a class="nav-item nav-link" href="/">Home</a>
 					<a class="nav-item nav-link" href="/blogs">Blogs</a>
 					<a class="nav-item nav-link" href="/donate">Donate</a>
-					<a class="nav-item nav-link" href="/dashboard/pages">Admin Pages</a>
-					<a class="nav-item nav-link" href="/dashboard/blogs">Admin Blog</a>
+					@auth
+						<a class="nav-item nav-link" href="/dashboard/pages">Admin Pages</a>
+						<a class="nav-item nav-link" href="/dashboard/blogs">Admin Blog</a>
+						<a class="dropdown-item nav-item nav-link" style="width:80px" href="{{ route('logout') }}"
+							onclick="event.preventDefault();
+										document.getElementById('logout-form').submit();">
+							{{ __('Logout') }}
+						</a>
+
+						<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+							@csrf
+						</form>
+						
+					@else
+						<li class="nav-item">
+							<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+						</li>
+					@endauth
 				</div>
 			</div>
 		</nav>
