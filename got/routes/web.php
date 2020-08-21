@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Deze regel moet boven
-Auth::routes();
+// Deze regel moet boven staan
+Auth::routes(['verify' => true]);
 
 Route::name('webhooks.mollie')->post('webhooks/mollie', 'WebHookController@handle');
 
@@ -33,11 +34,17 @@ Route::get('/blogs/detail/{blog}', 'PageController@blogDetail')->name('blogs.det
 
 
 Route::prefix('donate')->as('donate.')->group(function() {
-	Route::get('/', 'DonationController@getIndex')->name('index');
-	Route::post('/', 'DonationController@postDonate')->name('donate');
 
-	Route::get('/checkout', 'DonationController@getCheckout')->name('checkout');
-	Route::get('/succes', 'DonationController@getSucces')->name('succes');
+	Route::group(['middleware' => ['verified']], function () {
+
+        
+		Route::get('/', 'DonationController@getIndex')->name('index');
+		Route::post('/', 'DonationController@postDonate')->name('donate');
+
+		Route::get('/checkout', 'DonationController@getCheckout')->name('checkout');
+		Route::get('/succes', 'DonationController@getSucces')->name('succes');
+
+    });
 });
 
 Route::prefix('dashboard')->as('dashboard.')->group(function() {

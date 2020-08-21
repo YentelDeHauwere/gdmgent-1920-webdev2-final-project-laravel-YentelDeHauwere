@@ -1,5 +1,12 @@
 @extends('layout')
 
+<style>
+	.container-fluid.home-start  {
+		background-position: right bottom !important;
+		background-size: cover !important;
+		}
+</style>
+
 @section('content')
 
 <div class="container-fluid home-start">
